@@ -1,0 +1,36 @@
+{
+  "name": "node-enocean-ble",
+  "version": "0.0.1",
+  "description": "The node-enocean-ble is a Node.js module which allows you to monitor and parse telegrams comming from EnOcean BLE devices (rocker wall switch, multisensor). This module supports telegram authentication based on AES128 in CCM (Counter with CBC-MAC) mode and replayed telegram detection.",
+  "main": "./lib/enocean-ble.js",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "EnOcean",
+    "BLE",
+    "Bluetooth Low Energy",
+    "Bluetooth smart",
+    "Bluetooth"
+  ],
+  "homepage": "https://github.com/futomi",
+  "author": "Futomi Hatano <futomi.hatano@gmail.com> (https://github.com/futomi)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/futomi/node-enocean-ble.git"
+  },
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "@abandonware/noble": ">=1.9.2-10"
+  }
+}
