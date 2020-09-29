@@ -382,7 +382,7 @@ Property        | Type    | Description
 `authenticated` | Boolean | If the telegram was authenticated (verified) by the telegram authentication process based on AES128 in CCM (Counter with CBC-MAC) mode, the value will be `true`. Otherwise, the value will be `false`.
 `replayed`      | Boolean | If the sequence counter (the value of `sequence`) is less than or equal to the last counter (i.e., the telegram is replayed), the value will be `true`. Otherwise, it will be `false`.
 
-If the value of the `type` is `"commissioning"` ([`CommissioningTelegram`](#CommissioningTelegram-object)), the `signature`, `authenticated`, and `replayed` do **not** exist in the object.
+If the value of the `type` is `"commissioning"` ([`CommissioningTelegram`](#CommissioningTelegram-object)), the `signature` and `authenticated` do **not** exist in the object.
 
 ### <a id="SwitchTelegram-object">`SwitchTelegram` object</a>
 
@@ -512,7 +512,8 @@ Property        | Type    | Description
   manufacturerId: '03da',
   sequence: 47803,
   type: 'commissioning',
-  data: { key: '2358e2f4682e641a0000000000000000', address: 'e50010012345' }
+  data: { key: '2358e2f4682e641a0000000000000000', address: 'e50010012345' },
+  replayed: false
 }
 ```
 
@@ -536,6 +537,8 @@ I actually tested only [STM 550B Multisensor Module](https://www.enocean.com/en/
 ---------------------------------------
 ## <a id="Release-Note">Release Note</a>
 
+* v0.0.2 (2020-09-29)
+  * Added the replay detection in the commissioning telegram
 * v0.0.1 (2020-09-29)
   * First public release
 

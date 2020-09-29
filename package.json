@@ -1,7 +1,7 @@
 {
   "name": "node-enocean-ble",
-  "version": "0.0.1",
-  "description": "The node-enocean-ble is a Node.js module which allows you to monitor and parse telegrams comming from EnOcean BLE devices (rocker wall switch, multisensor). This module supports telegram authentication based on AES128 in CCM (Counter with CBC-MAC) mode and replayed telegram detection.",
+  "version": "0.0.2",
+  "description": "The node-enocean-ble monitors and parses telegrams coming from EnOcean BLE devices (rocker wall switch and multisensor). This module supports telegram authentication based on AES128 in CCM (Counter with CBC-MAC) mode and replayed telegram detection.",
   "main": "./lib/enocean-ble.js",
   "files": [
     "lib"
